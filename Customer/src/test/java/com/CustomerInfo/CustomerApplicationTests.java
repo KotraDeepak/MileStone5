@@ -28,7 +28,7 @@ class CustomerTest {
 	
 	@Test
 	public void getAllCustomerTest() {
-		when(CustRepo.findAll()).thenReturn(Stream.of(new Customer(1, "Deepak", "Male", 21, "veg"), new Customer(2, "Surya", "Female", 21, "nonveg")).collect(Collectors.toList()));
+		when(CustRepo.findAll()).thenReturn(Stream.of(new Customer(1, "Deepak", "Male", 21, "veg"), new Customer(2, "Surya", "Male", 21, "nonveg")).collect(Collectors.toList()));
 		assertEquals(2, ((Collection<Customer>) CustomerRepo.getAllCustomer()).size()); 
 	}
 	
